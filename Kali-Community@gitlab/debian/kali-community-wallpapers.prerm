@@ -1,0 +1,18 @@
+#!/bin/sh
+## Remove symbolic links
+
+
+## List all files
+find /usr/share/wallpapers/KaliCommunity/contents/images/ -print | while read x; do
+  ## Check if symbolic link
+  [ -h ${x} ] \
+    && rm -f ${x}
+done
+
+
+## Remove any empty values
+find  /usr/share/wallpapers/KaliCommunity/ -empty -delete
+
+
+## Happy days
+exit 0

@@ -1,0 +1,18 @@
+#!/bin/sh
+## Make symbolic links
+
+
+## Make sure there is a folder
+mkdir -p /usr/share/wallpapers/KaliCommunity/contents/images/
+
+
+## List all files
+find /usr/share/backgrounds/kali-community -print | while read x; do
+  ## Check if its a file
+  [ -f ${x} ] \
+    && ln -sf ${x} /usr/share/wallpapers/KaliCommunity/contents/images/
+done
+
+
+## Happy days
+exit 0

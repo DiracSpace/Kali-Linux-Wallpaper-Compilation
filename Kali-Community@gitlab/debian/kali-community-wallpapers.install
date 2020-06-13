@@ -1,0 +1,3 @@
+debian/gnome/kali-community-wallpapers.xml usr/share/gnome-background-properties/
+debian/gnome/metadata.desktop usr/share/wallpapers/KaliCommunity/
+*.png usr/share/backgrounds/kali-community/
